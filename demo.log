@@ -1,0 +1,12 @@
+2020-08-31 14:43:12.966  INFO 49012 --- [main] com.example.demo.DemoApplication         : Starting DemoApplication on GG-20190822ZDES with PID 49012 (D:\IDEA_WORKSPACE\IdeaProjects\demo\target\classes started by Administrator in D:\IDEA_WORKSPACE\IdeaProjects\demo)
+2020-08-31 14:43:12.968  INFO 49012 --- [main] com.example.demo.DemoApplication         : No active profile set, falling back to default profiles: default
+2020-08-31 14:43:13.667  INFO 49012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
+2020-08-31 14:43:13.676  INFO 49012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-31 14:43:13.676  INFO 49012 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-31 14:43:13.739  INFO 49012 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-31 14:43:13.739  INFO 49012 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 738 ms
+2020-08-31 14:43:13.827  INFO 49012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
+2020-08-31 14:43:13.854  INFO 49012 --- [main] com.example.demo.DemoApplication         : Started DemoApplication in 1.275 seconds (JVM running for 1.589)
+2020-08-31 14:43:27.344  INFO 42356 --- [main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests on GG-20190822ZDES with PID 42356 (started by Administrator in D:\IDEA_WORKSPACE\IdeaProjects\demo)
+2020-08-31 14:43:27.345  INFO 42356 --- [main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to default profiles: default
+2020-08-31 14:43:27.896  INFO 42356 --- [main] com.example.demo.DemoApplicationTests    : Started DemoApplicationTests in 0.775 seconds (JVM running for 1.466)

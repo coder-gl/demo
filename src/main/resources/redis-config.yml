@@ -1,0 +1,41 @@
+spring:
+  redis:
+    cluster:
+      nodes: 192.168.131.118:4883,192.168.131.118:4884,192.168.131.118:4885
+    #      nodes:
+    #        - 192.168.131.118:4883
+    #        - 1192.168.131.118:4884
+    #        - 192.168.131.118:4885
+    password: adfafsas
+    lettuce:
+      pool:
+        # 最大活跃链接数 默认8
+        max-active: 5
+        # 最大空闲连接数 默认8
+        max-idle: 10
+        # 最小空闲连接数 默认0
+        min-idle: 0
+        # 链接等待时长 ms
+        max-wait: 5000
+  secondaryRedis:
+    cluster:
+      nodes: 192.168.131.118:4883,192.168.131.118:4884,192.168.131.118:4885
+    #      nodes:
+    #        - 192.168.131.118:4883
+    #        - 192.168.131.118:4884
+    #        - 192.168.131.118:4885
+    password: advfafasfsa
+
+
+#spring:
+#  redis:
+#    host: 192.168.3.143
+#    port: 6380
+#    database: 14
+#    password:
+#    lettuce:
+#      pool:
+#        max-active: 1000
+#        max-idle: 10
+#        max-wait: -1
+#        min-idle: 5
