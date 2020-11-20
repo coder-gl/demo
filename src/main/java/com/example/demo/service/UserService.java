@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 /**
- * @author Administrator
+ * @author coder-gl
  */
 @Service
 public class UserService {
@@ -17,9 +17,7 @@ public class UserService {
     @Autowired
     @Qualifier(value = "redisTemplate")
     private RedisTemplate<String, Object> redisTemplate;
-    /*@Autowired
-    @Qualifier(value = "redisTemplate")
-    private StringRedisTemplate stringRedisTemplate;*/
+
 
     private static String keyStr = "userModel";
 

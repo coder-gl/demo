@@ -2,18 +2,28 @@ server:
   port: 8086
 spring:
   main:
-    lazy-initialization: true
+    lazy-initialization: false
   aop:
     auto: true
   output:
     ansi:
       enabled: always
+#  data:
+#    elasticsearch:
+#      cluster-name: elasticsearch
+#      cluster-nodes: 192.168.18.108:9200
+
   redis:
+    host: 192.168.3.143
+    port: 6380
+    database: 14
+    password:
+
     sentinel:
       master: masterRedis
       nodes: 192.168.18.108:26379,192.168.18.108:26380,192.168.18.108:26381
-    password: redistest
-    database: 2
+      password: redistest
+      database: 2
     lettuce:
       pool:
         # 最大活跃链接数 默认8
@@ -25,10 +35,12 @@ spring:
         # 链接等待时长 ms
         max-wait: 5000
 
+  cache:
+    jcache:
+      config: classpath:/config/ehcache.xml
 logging:
   level:
     root: info
   file:
     max-size: 10MB
     name: /logs/demo.log
-

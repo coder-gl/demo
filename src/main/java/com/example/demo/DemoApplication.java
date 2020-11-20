@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author Administrator
  */
-@SpringBootApplication
+@SpringBootApplication()
 public class DemoApplication {
 
 	public static void main(String[] args) {

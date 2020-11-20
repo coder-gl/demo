@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * @author Administrator
  */
-@Configuration
+//@Configuration
 public class RedisSentinelConfig {
     @Autowired
     private Environment environment;
