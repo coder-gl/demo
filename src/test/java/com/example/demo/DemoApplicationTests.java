@@ -2,32 +2,46 @@ package com.example.demo;
 
 import com.example.demo.service.LockService;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@SpringBootTest
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = DemoApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class DemoApplicationTests {
 
-	CountDownLatch countDownLatch = new CountDownLatch(100);
 
-	@Test
-	void contextLoads() {
-	}
 
 
 	@Autowired
 	private LockService lockService;
 
 	@Test
-	public void lockResourceTest(){
+	public void lockResourceTest() throws InterruptedException {
 		ExecutorService executorService = Executors.newFixedThreadPool(20);
+		CountDownLatch countDownLatch = new CountDownLatch(100);
+
+		CountDownLatch countDownLatch2 = new CountDownLatch(100);
 		for (int i = 0 ; i< 100 ; i++){
-			lockService.lockResource();
+			Callable callable = new Callable() {
+				@Override
+				public Object call() throws Exception {
+					countDownLatch.await();
+					lockService.lockResource();
+					countDownLatch2.countDown();
+					return null;
+				}
+			};
+			executorService.submit(callable);
+			countDownLatch.countDown();
 		}
+		countDownLatch2.await();
 
 	}
 

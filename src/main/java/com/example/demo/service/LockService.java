@@ -33,7 +33,7 @@ public class LockService {
                 lockThread.start();
                 //业务执行
                 System.out.println(Thread.currentThread().getName());
-                Thread.sleep(60*1000);
+                Thread.sleep(10*1000);
                 //服务结束，通知“续费”线程结束
                 runnable.stop();
                 lockThread.interrupt();
@@ -46,6 +46,6 @@ public class LockService {
     }
 
     private synchronized String randomStr(){
-        return UUID.randomUUID().toString() + String.valueOf((int) Math.random()*100);
+        return UUID.randomUUID().toString() +"___"+ String.valueOf((int) Math.random()*100);
     }
 }

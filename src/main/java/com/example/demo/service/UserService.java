@@ -15,7 +15,7 @@ import org.springframework.util.StringUtils;
 public class UserService {
 
     @Autowired
-    @Qualifier(value = "redisTemplate")
+    //@Qualifier(value = "redisTemplate")
     private RedisTemplate<String, Object> redisTemplate;
 
 

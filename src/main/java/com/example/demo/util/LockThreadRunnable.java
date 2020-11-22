@@ -24,7 +24,7 @@ public class LockThreadRunnable implements Runnable {
         while (isOk) {
             try {
                 //让线程休息会，别老占用资源
-                Thread.sleep(lockTime * 1000 / 4);
+                Thread.sleep(lockTime * 1000 / 3);
                 /*
                 //KEYS 参数
                 String[] keys = new String[]{key};
