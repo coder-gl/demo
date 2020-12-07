@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author Administrator
+ * @author coder-gl
  */
 @SpringBootApplication()
 public class DemoApplication {
@@ -13,4 +13,7 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
+
 }
+
+

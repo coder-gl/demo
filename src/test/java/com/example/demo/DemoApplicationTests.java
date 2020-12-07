@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -43,6 +45,12 @@ class DemoApplicationTests {
 		}
 		countDownLatch2.await();
 
+	}
+
+	@Test
+	public  void TestMain(){
+		Set<Long> set = new HashSet<>(3);
+		System.out.println(set.size());
 	}
 
 }
