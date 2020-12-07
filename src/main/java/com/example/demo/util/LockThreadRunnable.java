@@ -2,7 +2,7 @@ package com.example.demo.util;
 
 
 /**
- *
+ * 续命线程的实现类LockThreadRunnable
  * @author coder-gl
  */
 public class LockThreadRunnable implements Runnable {

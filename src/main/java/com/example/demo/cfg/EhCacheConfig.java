@@ -5,20 +5,16 @@ import org.ehcache.config.builders.CacheConfigurationBuilder;
 import org.ehcache.config.builders.CacheManagerBuilder;
 import org.ehcache.config.builders.ExpiryPolicyBuilder;
 import org.ehcache.config.builders.ResourcePoolsBuilder;
-import org.springframework.cache.ehcache.EhCacheCacheManager;
-import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;
-import org.springframework.cache.ehcache.EhCacheManagerUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
-import sun.plugin.javascript.navig.LinkArray;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
 
+
+/**
+ * EhCache 配置类
+ * @author coder-gl
+ */
 @Configuration
 public class EhCacheConfig {
 
@@ -35,7 +31,7 @@ public class EhCacheConfig {
         return cacheManager;
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(2);
@@ -106,6 +102,6 @@ public class EhCacheConfig {
           this.val = x;
           this.next = next;
       }
-  }
+  }*/
 
 }

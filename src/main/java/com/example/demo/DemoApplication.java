@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 /**
- * @author Administrator
+ * @author coder-gl
  */
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 @MapperScan(value = "com.example.demo.dao")
@@ -16,4 +16,7 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
+
 }
+
+
